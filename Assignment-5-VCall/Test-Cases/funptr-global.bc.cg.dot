@@ -1,0 +1,13 @@
+digraph "Call Graph" {
+	label="Call Graph";
+
+	Node0x5d617e735a90 [shape=record,shape=box,label="{CallGraphNode ID: 0 \{fun: DefaultAllocTable\}|{<s0>1}}"];
+	Node0x5d617e735a90:s0 -> Node0x5d617e70f280[color=black];
+	Node0x5d617e73efe0 [shape=record,shape=box,label="{CallGraphNode ID: 1 \{fun: PL_NewHashTable\}|{<s0>2|<s1>3|<s2>4}}"];
+	Node0x5d617e73efe0:s0 -> Node0x5d617e749f50[color=black];
+	Node0x5d617e73efe0:s1 -> Node0x5d617e735a90[color=red];
+	Node0x5d617e73efe0:s2 -> Node0x5d617e735a90[color=red];
+	Node0x5d617e7495f0 [shape=record,shape=box,label="{CallGraphNode ID: 2 \{fun: main\}}"];
+	Node0x5d617e749f50 [shape=record,shape=Mrecord,label="{CallGraphNode ID: 3 \{fun: MAYALIAS\}}"];
+	Node0x5d617e70f280 [shape=record,shape=Mrecord,label="{CallGraphNode ID: 4 \{fun: malloc\}}"];
+}

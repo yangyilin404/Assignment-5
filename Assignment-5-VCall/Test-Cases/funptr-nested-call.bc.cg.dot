@@ -1,0 +1,19 @@
+digraph "Call Graph" {
+	label="Call Graph";
+
+	Node0x64471c15d0e0 [shape=record,shape=box,label="{CallGraphNode ID: 0 \{fun: f\}|{<s0>1}}"];
+	Node0x64471c15d0e0:s0 -> Node0x64471c17bd90[color=black];
+	Node0x64471c1665c0 [shape=record,shape=box,label="{CallGraphNode ID: 1 \{fun: g\}|{<s0>2}}"];
+	Node0x64471c1665c0:s0 -> Node0x64471c17bd90[color=black];
+	Node0x64471c170bd0 [shape=record,shape=box,label="{CallGraphNode ID: 2 \{fun: fake_fun\}}"];
+	Node0x64471c171530 [shape=record,shape=box,label="{CallGraphNode ID: 3 \{fun: real_fun\}}"];
+	Node0x64471c10ec80 [shape=record,shape=box,label="{CallGraphNode ID: 4 \{fun: set\}}"];
+	Node0x64471c11d690 [shape=record,shape=box,label="{CallGraphNode ID: 5 \{fun: main\}|{<s0>3|<s1>4|<s2>5|<s3>6|<s4>7|<s5>8}}"];
+	Node0x64471c11d690:s0 -> Node0x64471c10ec80[color=black];
+	Node0x64471c11d690:s1 -> Node0x64471c10ec80[color=black];
+	Node0x64471c11d690:s2 -> Node0x64471c170bd0[color=red];
+	Node0x64471c11d690:s3 -> Node0x64471c171530[color=red];
+	Node0x64471c11d690:s4 -> Node0x64471c170bd0[color=red];
+	Node0x64471c11d690:s5 -> Node0x64471c171530[color=red];
+	Node0x64471c17bd90 [shape=record,shape=Mrecord,label="{CallGraphNode ID: 6 \{fun: printf\}}"];
+}

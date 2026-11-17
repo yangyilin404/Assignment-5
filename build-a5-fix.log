@@ -1,0 +1,4 @@
+[ 50%] Built target a5lib
+[ 75%] Building CXX object Assignment-5-VCall/CMakeFiles/vcall.dir/VCall.cpp.o
+[100%] Linking CXX executable /home/yyl/SA-BIT2026-SVF-video/Assignment-5/Assignment-5-VCall/vcall
+[100%] Built target vcall

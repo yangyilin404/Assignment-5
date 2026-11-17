@@ -1,0 +1,64 @@
+LLVM_DIR: /home/yyl/SA-BIT2026-SVF-video/llvm-16.0.0.obj
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Failed to find upstream/system Z3 package; reverting to manual search
+-- Extracted Z3 version information from /home/yyl/SA-BIT2026-SVF-video/z3.obj/include/z3_version.h
+-- Parsed Z3 version: 4.8.8.0
+-- Found Z3: /home/yyl/SA-BIT2026-SVF-video/z3.obj/include (found version "4.8.8.0") 
+-- Manually found Z3 (libs: /home/yyl/SA-BIT2026-SVF-video/z3.obj/bin/libz3.so; public headers: /home/yyl/SA-BIT2026-SVF-video/z3.obj/include)
+-- Performing Test Terminfo_LINKABLE
+-- Performing Test Terminfo_LINKABLE - Success
+-- Found Terminfo: /usr/lib/x86_64-linux-gnu/libtinfo.so  
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11")  
+-- Found LibXml2: /usr/lib/x86_64-linux-gnu/libxml2.so (found version "2.9.13") 
+-- SVF STATUS:
+    Found:                              1
+    Version:                            3.2
+    Build mode:                         Release
+    C++ standard:                       17
+    RTTI enabled:                       ON
+    Exceptions enabled:                 ON
+    Install root directory:             /home/yyl/SA-BIT2026-SVF-video/Release-build
+    Install binary directory:           /home/yyl/SA-BIT2026-SVF-video/Release-build/bin
+    Install library directory:          /home/yyl/SA-BIT2026-SVF-video/Release-build/lib
+    Install include directory:          /home/yyl/SA-BIT2026-SVF-video/Release-build/include/../../svf/include;/home/yyl/SA-BIT2026-SVF-video/Release-build/include/../../svf-llvm/include;/home/yyl/SA-BIT2026-SVF-video/Release-build/include
+    Install 'extapi.bc' file path:      /home/yyl/SA-BIT2026-SVF-video/Release-build/lib/extapi.bc
+    Install BC:                         /home/yyl/SA-BIT2026-SVF-video/Release-build/lib/extapi.bc
+-- LLVM_DIR: /home/yyl/SA-BIT2026-SVF-video/llvm-16.0.0.obj
+-- LLVM STATUS:
+    Version:                            16.0.4
+    Includes:                           /home/yyl/SA-BIT2026-SVF-video/llvm-16.0.0.obj/include
+    Libraries:                          /home/yyl/SA-BIT2026-SVF-video/llvm-16.0.0.obj/lib
+    Build type:                         Release
+    RTTI enabled:                       ON
+    Exceptions enabled:                 OFF
+    Dynamic lib:                        ON
+-- Linker detection: GNU ld
+-- Z3 STATUS:
+    Z3 library file:                    z3::libz3
+    Z3 include directory:               /home/yyl/SA-BIT2026-SVF-video/z3.obj/include
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/yyl/SA-BIT2026-SVF-video/Assignment-5/build
+[ 25%] Building CXX object Assignment-5-VCall/CMakeFiles/a5lib.dir/A5Lib.cpp.o
+[ 50%] Linking CXX static library liba5lib.a
+[ 50%] Built target a5lib
+[ 75%] Building CXX object Assignment-5-VCall/CMakeFiles/vcall.dir/VCall.cpp.o
+/home/yyl/SA-BIT2026-SVF-video/Assignment-5/Assignment-5-VCall/VCall.cpp: In member function ‘void Andersen::updateCallGraph(SVF::CallGraph*)’:
+/home/yyl/SA-BIT2026-SVF-video/Assignment-5/Assignment-5-VCall/VCall.cpp:183:22: error: ‘class SVF::SVFIR’ has no member named ‘getObjVar’; did you mean ‘getFIObjVar’?
+  183 |                 pag->getObjVar(target);
+      |                      ^~~~~~~~~
+      |                      getFIObjVar
+make[2]: *** [Assignment-5-VCall/CMakeFiles/vcall.dir/build.make:76：Assignment-5-VCall/CMakeFiles/vcall.dir/VCall.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:234：Assignment-5-VCall/CMakeFiles/vcall.dir/all] 错误 2
+make: *** [Makefile:91：all] 错误 2
